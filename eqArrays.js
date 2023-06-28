@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 
 const eqArrays = function(actual, expected) {
-  if (actual === expected) {
+  if (actual.toString() === expected.toString()) {
     return true;
   } else {
     return false;

@@ -1,7 +1,7 @@
 const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed:  ${actual} === ${expected}`);
-  } else {
+  } else if (!eqArrays(actual, expected)) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !==  ${expected}`);
   }
 };
@@ -14,14 +14,6 @@ const eqArrays = function(actual, expected) {
     return false;
   }
 };
-
-
-
-
-
-
-
-
 
 
 

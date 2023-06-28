@@ -8,4 +8,18 @@ const eqArrays = function(actual, expected) {
 };
 
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3]), true);
+
+const assertArraysEqual = function(actual, expected){
+  if (actual === expected) {
+    console.log("✅✅✅ Assertion Passed");
+  } else if (actual !== expected) {
+    console.log("🛑🛑🛑 Assertion Failed");
+  }
+  return ''
+};
+
+
+
+// test value:
+
+console.log (assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));

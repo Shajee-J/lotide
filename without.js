@@ -18,23 +18,23 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 const included = function(elm, arr) {
-let result = false
-  for (i = 0; i < arr.length; i++){
-  if (elm === arr[i]){
-result = true
+  let result = false;
+  for (let i = 0; i < arr.length; i++) {
+    if (elm === arr[i]) {
+      result = true;
+    }
   }
-}
-return result
+  return result;
 };
 
 
 
 
 const without = function(source, remove) {
-  let newArr = [];                                                                
+  let newArr = [];
   for (let i = 0; i < source.length; i++) {
-  if (!included(source[i], remove)) 
-  newArr.push(source[i])  
+    if (!included(source[i], remove))
+      newArr.push(source[i]);
   }
   console.log(source);
   return newArr;

@@ -1,8 +1,7 @@
 const eqArrays = function(actual, expected) {
   if (actual.toString() === expected.toString()) {
     return true;
-  } else 
-  {
+  } else {
     return false;
   }
 };
@@ -20,11 +19,11 @@ const assertArraysEqual = function(actual, expected) {
 
 
 // testt arrays:
-const fullName = [`John`, `Jacob`, `Smith`,] 
+const fullName = [`John`, `Jacob`, `Smith`,];
 
-const serialCode = [`2xa1`, `3xa1`, `4xa1`]
+const serialCode = [`2xa1`, `3xa1`, `4xa1`];
 
-const members = [`Ruby`, `Weiss`, `Blake`, `Yang`]
+const members = [`Ruby`, `Weiss`, `Blake`, `Yang`];
 
 
 
@@ -40,11 +39,11 @@ const map = function(array, callback) {
     results.push(callback(item));
   }
   return results;
-}
+};
 
 
 const results1 = map(words, word => word[0]);
-console.log(results1);
+console.log((assertArraysEqual(results1, ['g', 'c', 't', 'm', 't'])));
 
 
 // test values:
@@ -57,10 +56,5 @@ console.log(assertArraysEqual((batchNumber), ([`2`, `3`, `4`])));
 
 const teamName = map(members, word => word[0]);
 console.log(assertArraysEqual((teamName), ([`R`, `W`, `B`, `Y`])));
-
-
-
-
-
 
 

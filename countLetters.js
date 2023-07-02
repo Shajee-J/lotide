@@ -8,22 +8,22 @@ const assertEqual = function(actual, expected) {
 
 
 
- const countLetters = function(str) { 
+const countLetters = function(str) {
   let results = {};
  
   // alternate method to isolating the letters in the string using normal for... loop:
   // for (let i = 0; i < str.length; i++) {
   //  const letter = str[i];
 
-  for (let letter of str){
+  for (let letter of str) {
    
     if (results[letter]) {
       results[letter] += 1;
     
-      } else {
-        results[letter] = 1;
-      }
+    } else {
+      results[letter] = 1;
     }
+  }
   
   return results;
 };
@@ -32,14 +32,14 @@ const assertEqual = function(actual, expected) {
 
 // test values:
 
-const trialObject = 
+const trialObject =
 {
-s: 1, 
-h: 1, 
-a: 1, 
-j: 1, 
-e: 2
-}
+  s: 1,
+  h: 1,
+  a: 1,
+  j: 1,
+  e: 2
+};
 
 
 console.log(assertEqual(Object.values(countLetters("shajee")).toString(), Object.values(trialObject).toString()));

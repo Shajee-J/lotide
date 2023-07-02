@@ -8,7 +8,7 @@ const assertEqual = function(actual, expected) {
 
 
 
-const head = (x, y) => {
+const head = (x) => {
   if (x === []) {
     return undefined;
   } else {
@@ -21,10 +21,10 @@ const head = (x, y) => {
 
 
 //           test code:
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(1, -1);
-assertEqual("working", "working");
+// assertEqual("Lighthouse Labs", "Bootcamp");
+// assertEqual(1, 1);
+// assertEqual(1, -1);
+// assertEqual("working", "working");
 
 
 assertEqual(head([5,6,7]), 5);

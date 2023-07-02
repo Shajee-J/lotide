@@ -1,8 +1,7 @@
 const eqArrays = function(actual, expected) {
   if (actual.toString() === expected.toString()) {
     return true;
-  } else 
-  {
+  } else {
     return false;
   }
 };
@@ -19,5 +18,5 @@ const assertArraysEqual = function(actual, expected) {
 
 // test value:
 
-console.log (assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
+console.log(assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
 

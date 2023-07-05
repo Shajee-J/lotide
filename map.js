@@ -53,12 +53,15 @@ module.exports = map
 // test values:
 
 const intials = map(fullName, word => word[0]);
+
 console.log(assertArraysEqual((intials), ([`J`, `J`, `S`])));
 
 const batchNumber = map(serialCode, word => word[0]);
+
 console.log(assertArraysEqual((batchNumber), ([`2`, `3`, `4`])));
 
 const teamName = map(members, word => word[0]);
+
 console.log(assertArraysEqual((teamName), ([`R`, `W`, `B`, `Y`])));
 
 

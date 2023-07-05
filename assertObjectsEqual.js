@@ -1,4 +1,4 @@
-const eqArrays = function(actual, expected) {
+const eqArrays = function (actual, expected) {
   if (actual.toString() === expected.toString()) {
     return true;
   } else {
@@ -7,7 +7,7 @@ const eqArrays = function(actual, expected) {
 };
 
 
-const eqObjects = function(obj1, obj2) {
+const eqObjects = function (obj1, obj2) {
   let result = false;
   let keys1 = Object.keys(obj1);
   let keys2 = Object.keys(obj2);
@@ -20,7 +20,7 @@ const eqObjects = function(obj1, obj2) {
 
       } else if (obj1[key] === obj2[key]) {
         result = true;
-        
+
       } else {
         result = false;
       }
@@ -33,7 +33,7 @@ const eqObjects = function(obj1, obj2) {
 };
 
 
-const assertObjectsEqual = function(actual, expected) {
+const assertObjectsEqual = function (actual, expected) {
   console.log("reading objects in just a sec :D!");
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -45,9 +45,12 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 
+module.exports = assertObjectsEqual
 
-const pets = {brd: "Chi", cat: "Lenny", turtle: "lawrence"};
-const pets2 = {cat: "Lenny", turtle: "lawrence", bird: "Chi"};
+
+const pets = { brd: "Chi", cat: "Lenny", turtle: "lawrence" };
+const pets2 = { cat: "Lenny", turtle: "lawrence", bird: "Chi" };
 
 assertObjectsEqual(pets, pets2);
+
 

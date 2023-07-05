@@ -53,7 +53,7 @@ const eqObjects = function(obj1, obj2) {
   return result;
 };
 
-
+module.exports = eqObjects
 
 // test values:
 

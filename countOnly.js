@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅✅✅ Assertion Passed:  ${actual} === ${expected}`);
   } else {
@@ -9,8 +9,8 @@ const assertEqual = function(actual, expected) {
 
 
 
-const countOnly = function(allItems, itemsToCount) {
-// to store new arr
+const countOnly = function (allItems, itemsToCount) {
+  // to store new arr
   let num = {};
   // to loop accross allItems array
   for (let i = 0; i < allItems.length; i++) {
@@ -35,6 +35,11 @@ const countOnly = function(allItems, itemsToCount) {
   // return new oject, with vlaues stating how many times its respective "key" was read in the array
   return num;
 };
+
+
+
+module.exports = countOnly
+
 
 // testing values
 

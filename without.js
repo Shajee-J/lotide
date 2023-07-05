@@ -1,4 +1,4 @@
-const eqArrays = function(actual, expected) {
+const eqArrays = function (actual, expected) {
   if (actual.toString() === expected.toString()) {
     return true;
   } else {
@@ -8,7 +8,7 @@ const eqArrays = function(actual, expected) {
 
 
 
-const assertArraysEqual = function(actual, expected) {
+const assertArraysEqual = function (actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}] `);
   } else if (!eqArrays(actual, expected)) {
@@ -17,7 +17,7 @@ const assertArraysEqual = function(actual, expected) {
   return '';
 };
 
-const included = function(elm, arr) {
+const included = function (elm, arr) {
   let result = false;
   for (let i = 0; i < arr.length; i++) {
     if (elm === arr[i]) {
@@ -30,7 +30,7 @@ const included = function(elm, arr) {
 
 
 
-const without = function(source, remove) {
+const without = function (source, remove) {
   let newArr = [];
   for (let i = 0; i < source.length; i++) {
     if (!included(source[i], remove))
@@ -41,6 +41,7 @@ const without = function(source, remove) {
 };
 
 
+module.exports = without
 
 
 // test value:
